@@ -24,28 +24,28 @@ function generate_env_file {
 
 function start_docker {
     echo "Starting Docker containers..."
-    docker-compose up -d
+    docker compose up -d
 }
 
 function composer_install {
     echo "Installing Composer dependencies..."
-    docker exec -it submission-api-app-1 composer install
+    docker compose exec -it app composer install
 }
 
 function generate_app_key {
     echo "Generating application key..."
-    docker exec -it submission-api-app-1 php artisan key:generate
+    docker compose exec -it app php artisan key:generate
 }
 
 function run_migrations {
     echo "Running migrations..."
-    docker exec -it submission-api-app-1 php artisan migrate
+    docker compose exec -it app php artisan migrate
 }
 
 function setup_project {
     # Check for required dependencies
     check_dependency docker
-    check_dependency docker-compose
+    check_dependency docker compose
     check_dependency git
 
     # Generate .env file
