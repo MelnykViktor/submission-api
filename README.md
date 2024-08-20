@@ -52,6 +52,6 @@ curl -X POST http://localhost/api/submit \
 
 ### 4. Running Tests
 ```
-docker exec -it submission-api-app-1 php artisan test`
+docker exec -it app php artisan test`
 ```
 
