@@ -22,7 +22,7 @@ This is a Laravel-based API that accepts user submissions, processes them using 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YourUsername/submission-api.git
+git clone git@github.com:MelnykViktor/submission-api.git
 cd submission-api
 ```
 
